@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class='height_100'>
 <head>
-<title>GRDR CDM Browser</title>
+<title>OMOP v4 Vocabulary Browser</title>
 <meta content="Algolia's Search API makes it easy to deliver a great search experience in your apps &amp; websites. Algolia Search provides hosted full-text, numerical, faceted and geolocalized search." name='description'>
 <meta content='hosted, full-text, facet, faceted, numerical, geolocation, search, rest, api, relevance, popularity, mobile' name='keywors'>
 <link href='https://d3ibatyzauff7b.cloudfront.net/assets/favicon-9b8aeabc111020c2411e87222b08a5bd.ico' rel='shortcut icon'>
@@ -22,6 +22,7 @@
 <meta content='500' property='og:image:height'>
 <link href="https://d3ibatyzauff7b.cloudfront.net/assets/application-8d2b14f91b0b41cd150435ba039961df.css" media="all" rel="stylesheet" type="text/css" />
 <script src="https://d3ibatyzauff7b.cloudfront.net/assets/application-457fe258ca60591bbdb38ec84a117174.js" type="text/javascript"></script>
+
 <!--[if lt IE 9]>
 <link href="https://d3ibatyzauff7b.cloudfront.net/assets/ie-76071597f2842bcd91fc8e1a931fa929.css" media="screen" rel="stylesheet" type="text/css" />
 <script src="https://d3ibatyzauff7b.cloudfront.net/assets/respond.min-1e58cee3dc71e3da71c227b49905d0dc.js" type="text/javascript"></script>
@@ -70,7 +71,7 @@ START COPY/PASTE
 <script src="http://demos.algolia.com/algoliasearch.min.js" type="text/javascript"></script>
 -->
 <!-- ======================== -->
-<!-- DEMO APPLICATION: CSS snippet -->
+<!-- CSS Snippet -->
 <!-- ======================== -->
 <style>
   .search-form {
@@ -200,23 +201,23 @@ START COPY/PASTE
 </style>
 
 <!-- ======================== -->
-<!-- DEMO APPLICATION: HTML snippet -->
+<!-- HTML snippet -->
 <!-- ======================== -->
 <section class='panel'>
 <div class='panel-body'>
 
-<div class='h3 pull-left'>GRDR Common Data Model Terminology Browser</div>
+<div class='h3 pull-left'>OMOP v4 Standard Vocabulary Browser</div>
 <div class='clearfix'></div>
 <div class='spacer20 hidden-xs'></div>
 <div class='text-center hidden-xs'>
-Based on OMOP v4 CDM Vocabulary
+Based on OMOP v4's CONCEPT table. Still in development. Please send comments to vassr at email chop edu.
 <code>http://omop.org/CDM</code>
 </div>
 <div class='spacer20'></div>
 <div class='search-box-wrapper'>
 <div class='search-box'>
 <div id='inputfield'>
-<input autocomplete='off' autocorrect='off' name='address' placeholder='Enter concept name, concept class, vocabulary' spellcheck='false' type='text'>
+<input class='typeahead' autocomplete='off' autocorrect='off' name='address' placeholder='Enter concept name, concept class, vocabulary' spellcheck='false' type='text'>
 </div>
 <div class='searchbutton'>
 <i class='icon-search'></i>
@@ -398,11 +399,13 @@ Based on OMOP v4 CDM Vocabulary
       index.search($("#inputfield input").val(), searchCallback, {
         hitsPerPage: 10,
         facets: '*',
+        optionalWords: ['alpha'],
         maxValuesPerFacet: 10,
         facetFilters: facetFilters,
         distinct: 1
       });
     }
+
   
     $("#inputfield input").keyup(function() {
       refinements = {};
