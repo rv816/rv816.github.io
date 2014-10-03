@@ -1,43 +1,50 @@
+
 <!DOCTYPE html>
-<html class='height_100'>
+<html lang='en'>
 <head>
+<meta charset='UTF-8'>
 <title>OMOP v4 Vocabulary Browser</title>
 
-<link href='https://d3ibatyzauff7b.cloudfront.net/assets/favicon-9b8aeabc111020c2411e87222b08a5bd.ico' rel='shortcut icon'>
-
-<meta name="google-site-verification" content="GHWU5G4rFcb8b21jO2XIaRZS8Euu9HnSjoUF07iJOwg" />
-<meta content='1200' property='og:image:width'>
-<meta content='500' property='og:image:height'>
-<link href="https://d3ibatyzauff7b.cloudfront.net/assets/application-8d2b14f91b0b41cd150435ba039961df.css" media="all" rel="stylesheet" type="text/css" />
-<script src="https://d3ibatyzauff7b.cloudfront.net/assets/application-457fe258ca60591bbdb38ec84a117174.js" type="text/javascript"></script>
-
+<link href="https://d3ibatyzauff7b.cloudfront.net/assets/vendors-8b1f48ce62f9b893d42b0dc7082b87dd.css" media="all" rel="stylesheet" />
+<link href="https://d3ibatyzauff7b.cloudfront.net/assets/override-d774c1f5134f61817e929860d47f7955.css" media="all" rel="stylesheet" />
+<link href="https://d3ibatyzauff7b.cloudfront.net/assets/application-d977376fd343ad5069731bb4cac63d60.css" media="all" rel="stylesheet" />
+<link href="https://d3ibatyzauff7b.cloudfront.net/assets/override-d774c1f5134f61817e929860d47f7955.css" media="all" rel="stylesheet" />
+<link href="//fonts.googleapis.com/css?family=Dosis:300,400,600" media="screen" rel="stylesheet" />
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" media="screen" rel="stylesheet" />
+<script src="https://d3ibatyzauff7b.cloudfront.net/assets/application-244fd66d5800dd1a9d53f0eb44a9e782.js"></script>
 <!--[if lt IE 9]>
-<link href="https://d3ibatyzauff7b.cloudfront.net/assets/ie-76071597f2842bcd91fc8e1a931fa929.css" media="screen" rel="stylesheet" type="text/css" />
-<script src="https://d3ibatyzauff7b.cloudfront.net/assets/respond.min-1e58cee3dc71e3da71c227b49905d0dc.js" type="text/javascript"></script>
-<script src="https://d3ibatyzauff7b.cloudfront.net/assets/html5-edaded9c29babfcbf5f875c95e8e87a3.js" type="text/javascript"></script>
+<link href="https://d3ibatyzauff7b.cloudfront.net/assets/ie-0c55892c68e6c522df9ca7951abd570e.css" media="screen" rel="stylesheet" />
+<script src="https://d3ibatyzauff7b.cloudfront.net/assets/respond.min-3e7529e90482f20a91a5eec56e79eddf.js"></script>
+<script src="https://d3ibatyzauff7b.cloudfront.net/assets/html5-6e3937a70d91d083b7ec550d9f729b9e.js"></script>
 <![endif]-->
 <meta content="authenticity_token" name="csrf-param" />
-<meta content="wDPmeiUTZixzYrTDXwa1lLbiCF72Mi5FHXcIXsVlWp4=" name="csrf-token" />
-<script src="https://d3ibatyzauff7b.cloudfront.net/assets/algolia/algoliasearch.min-ca3c03fc39e3e4ddeb2589b6e2b2c73d.js" type="text/javascript"></script>
-  <head>
+<meta content="Nzk8XGBiQHkfjACRHcrhWyQP455vrlm9xHcWy7acilA=" name="csrf-token" />
+<script src="https://d3ibatyzauff7b.cloudfront.net/assets/algolia/algoliasearch.min-803ee1352aa72d095d5702c3d44da548.js"></script>
+<script src="https://d3ibatyzauff7b.cloudfront.net/javascripts/algolia/typeahead.bundle.min.js"></script>
    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
-  </head>
 </head>
 <body>
-<div id='clear-page'>
+<div class='clear-page'>
 <div class='container'>
 <div class='m-l-r-auto m1000'>
 <div class='text-center hidden-xs'>
-<h1 style="color:white">NIH Global Rare Disease Repository</h1>
-<h2 style="color:white">Data Coordinating Center @ CHOP</h2>
-</a><div class='spacer40'></div>
+<div class='spacer30'></div>
 </div>
-
-<!-- 
 <div class='text-center visible-xs'>
-<a href="/"><img alt="Algolia_white" src="https://d3ibatyzauff7b.cloudfront.net/assets/algolia_white-1f089a49a2fd1b5eb32b1d8ed240b4a7.png" style="height: 40px;" />
-</a></div> -->
+<a href="/"><img alt="Algolia256x80 dark" src="https://d3ibatyzauff7b.cloudfront.net/assets/algolia256x80_dark-14cf5e41fe5735d282365f3b5113ab96.png" style="height: 40px;" />
+</a><div class='spacer20'></div>
+</div>
+<div id='share-engine'>
+<h1 style="color:white">NIH Global Rare Disease Repository</h1>
+<h2 style="color:white">OMOP V4 Standard Vocabulary Browser</h2>
+<div class='clearfix'></div>
 
+
+<script>
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
+</div>
+<div class='spacer30'></div>
 <!--
 DETAILS
 ======
@@ -45,24 +52,22 @@ Index: omop_concepts
 Application ID: 31K5UZ93QX
 Public API key: d36dd7750ca00f7e417702bd1664d51a
 Index: omop_concepts
-Title: Boogo
-Subtitle: 
+Title: GRDR Terminology Browser
+Subtitle: Instantly Search the OMOP v4 Data model
 -->
 <!--
 START COPY/PASTE
 8<---------------8<---------------8<---------------8<---------------
 -->
-<!--
-=======================================
-|| uncomment if not already included  ||
-=======================================
-<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" media="all" rel="stylesheet" type="text/css" />
-<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="http://demos.algolia.com/algoliasearch.min.js" type="text/javascript"></script>
--->
+
+
+<link href="//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css" />
+<link href="//cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
+<script src="//cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/algoliasearch/latest/algoliasearch.min.js" type="text/javascript"></script>
+
 <!-- ======================== -->
-<!-- CSS Snippet -->
+<!--  APPLICATION: CSS snippet -->
 <!-- ======================== -->
 <style>
   .search-form {
@@ -79,74 +84,32 @@ START COPY/PASTE
   }
   
   .search-box-wrapper {
-    padding: 10px 15px;
+    padding: 50px 100px 10px 100px;
     font-size: 1em;
-    background-color: #5191d1;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
+    background-color: #122337;
     max-width: 100%;
-    margin: 0px auto 20px auto;
+    margin: 0px auto 0px auto;
   }
   
   .search-box {
     margin: 0px 0 0 0;
-    padding: 0 0 0 0;
+    padding: 0 0 0 50px;
+    border-bottom: 2px solid white;
     position: relative;
-    height: 45px;
   }
   
   #inputfield {
     margin-right: 56px;
   }
   
-  #inputfield input {
-    width: 100%;
-    height: 45px;
-    display: block;
-    border: 1px solid #cfcfcf;
-    color: #000;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    -webkit-appearance: none;
-    padding: 10px 13px 10px 13px;
-    line-height: 23px;
-    float: left;
-    font-size: 1em;
-    background-color: white;
-    -webkit-rtl-ordering: logical;
-    -webkit-user-select: text;
-    cursor: auto;
-    margin: 0em;
-    border-radius: 4px 0px 0px 4px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-  }
-  #inputfield input:focus {
-    outline-width: 0px;
-  }
-  
-  .search-box .searchbutton {
-    cursor: pointer;
-    display: inline-block;
-    padding: 0px;
-    width: 56px;
-    height: 45px;
-    margin: 0px 0 0 -1px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    background-color: #FFFFFF;
-    border: 1px solid #999;
-    text-align: center;
-    color: #5191d1;
-  }
-  
-  .searchbutton i {
-    display:inline-block;
-    margin-top: 7px;
-    vertical-align: middle;
+  #inputfield i {
     font-size: 25px;
+    color: white;
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
   }
-  h1 {
+    h1 {
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;
     font-weight: 800;
@@ -158,17 +121,45 @@ START COPY/PASTE
     font-weight: 300;
     font-size: 35px
   }
+
+   .h4 {
+    font-family: 'Open Sans', sans-serif;
+  }
+    .h3 {
+    font-family: 'Open Sans', sans-serif;
+  }
+  #inputfield input {
+    width: 100%;
+    height: 45px;
+    display: block;
+    border: none;
+    color: white;
+    padding: 0;
+    font-size: 2em;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    margin: 0em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+  }
+  }
+  #inputfield input:focus {
+    outline-width: 0px;
+  }
   
+
   #facets {
     float: left;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400
+    font-weight: 400;
   }
   
   #facets li.active {
-    font-weight: bold;
+       font-weight: bold;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400
+    font-weight: 400;
   }
   
   #hits {
@@ -178,51 +169,42 @@ START COPY/PASTE
   
   .hit {
     padding: 5px 10px;
-    font-family: 'Open Sans', sans-serif;
     margin-bottom: 10px;
-    border: 1px solid #5191d1;
+    border: 1px solid #dedede;
+    font-family: 'Open Sans', sans-serif;
   }
   
   .hit em {
-    font-style: normal;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     color: #1D52E1;
+    font-size: 1.1em;
+    background-color: #46AEDA;
+    color: white;
+    padding: 0.05em 0.1em;
+    font-style: normal;
   }
 </style>
-
 <!-- ======================== -->
-<!-- HTML snippet -->
+<!--  APPLICATION: HTML snippet -->
 <!-- ======================== -->
-<section class='panel'>
-<div class='panel-body'>
-
-<div class='h3 pull-left'>OMOP v4 Standard Vocabulary Browser</div>
-<div class='clearfix'></div>
-<div class='spacer20 hidden-xs'></div>
-<div class='text-center hidden-xs'>
-Based on OMOP v4's CONCEPT table. Still in development. Please send comments to vassr at email chop edu.
-<code>http://omop.org/CDM</code>
-</div>
-<div class='spacer20'></div>
 <div class='search-box-wrapper'>
 <div class='search-box'>
 <div id='inputfield'>
-<input class='typeahead' autocomplete='off' autocorrect='off' name='address' placeholder='Enter concept name, concept class, vocabulary' spellcheck='false' type='text'>
-</div>
-<div class='searchbutton'>
-<i class='icon-search'></i>
+<i class='fa fa-search icon-search'></i>
+<input autocomplete='off' autocorrect='off' placeholder='Enter concept name, concept class, concept code, vocabulary id.....' spellcheck='false' type='text'>
 </div>
 </div>
 </div>
-<div class='text-right text-small' id='stats'></div>
+<section class='panel'>
+<div class='panel-body'>
+<div class='text-right text-sm' id='stats'></div>
 <div id='facets'></div>
 <div id='hits'></div>
 </div>
 </section>
 <!-- ======================== -->
-<!--
-APPLICATION: javascript snippet -->
+<!-- APPLICATION: javascript snippet -->
 <!-- ======================== -->
 <script>
   // Helper
@@ -285,7 +267,6 @@ APPLICATION: javascript snippet -->
         }
         res += '</span> ';
       }
-
       // hit subtitle (secondary attribute)
       if ('CONCEPT_CLASS' !== '' && 'CONCEPT_CLASS' !== 'terminology_name') {
         var v = hit._highlightResult['CONCEPT_CLASS'] ?
@@ -323,28 +304,23 @@ APPLICATION: javascript snippet -->
          res += "<dt>Source Term Code: </dt><dd>" + stripTags(v) + "<dd></dl>";
         }
       }
-
-
-
       // hit description (tertiary attribute)
 
       // display all other attributes?
       if (true) {
         res += '<dl class="dl-horizontal">';
         for (var attr in hit) {
-          if (attr != 'objectID' && attr !== '_highlightResult' && attr != 'CONCEPT_NAME' && attr != 'terminology_name' && attr != 'CONCEPT_CLASS' && attr != 'CONCEPT_CODE' && attr != '') {
+          if (attr !== 'objectID' && attr !== '_highlightResult' && attr != 'CONCEPT_NAME' && attr != 'CONCEPT_CODE' && attr != 'terminology_name') {
             var v;
             if (hit._highlightResult[attr]) {
               v = hit._highlightResult[attr].value;
             } else {
               v = hit[attr];
             }
-            
             if (v && (typeof v !== 'string' || v.trim() !== '')) {
               res += "<dt>" + stripTags(attr) + ": </dt><dd>" + stripTags(v) + "</dd>";
             }
           }
-          
         }
         res += '</dl>';
       }
@@ -360,7 +336,7 @@ APPLICATION: javascript snippet -->
           facets.push([f, content.facets[facet][f]]);
         }
         facets.sort(function(a, b) { return a[1] < b[1] ? 1 : (a[1] > b[1] ? -1 : 0) });
-        res += '<li class="m-b-large"><h5>' + facet + '</h5>' +
+        res += '<li class="m-b-large"><h3>' + facet + '</h3>' +
           '<ol class="list-unstyled m-l">' +
           $.map(facets, function(v) {
             return '<li class="' + stripTags(refinements[facet + ':' + v[0]] ? 'active' : '') + '"><a href="#" onclick="toggleRefinement(\'' + stripTags(facet) + '\', \'' + stripTags(v[0]) + '\'); return false;">' + stripTags(v[0]) + '</a> (' + v[1] + ')</li>';
@@ -368,8 +344,8 @@ APPLICATION: javascript snippet -->
           '</ol></li>';
       }
       res += '</ul>'
-      $('#facets').html(res).css('float', 'left').css('width', '200px');
-      $('#hits').css('float', 'left').css('width', '600px');
+      $('#facets').html(res).css('float', 'left').css('width', '20%');
+      $('#hits').css('float', 'right').css('width', '75%');
     }
   
     // stats
@@ -391,13 +367,10 @@ APPLICATION: javascript snippet -->
       index.search($("#inputfield input").val(), searchCallback, {
         hitsPerPage: 10,
         facets: '*',
-        optionalWords: ['alpha'],
         maxValuesPerFacet: 10,
-        facetFilters: facetFilters,
-        distinct: 1
+        facetFilters: facetFilters
       });
     }
-
   
     $("#inputfield input").keyup(function() {
       refinements = {};
@@ -420,14 +393,13 @@ END COPY/PASTE
 
 
 
-
 <script>
-  window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
-  window.analytics.load("a1u47srrv4");
-  window.analytics.identify(2263, {"email":"ryan.vass.junk@gmail.com"}, { Intercom: { user_hash: '8bdde656b5ffd46cfc4c454fb3d41966f94ed251315e0f8a26a735407bd36030'} });
+  window.segmentio=window.segmentio||[],window.segmentio.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.segmentio.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.segmentio.push(a),window.segmentio}};for(var i=0;i<window.segmentio.methods.length;i++){var key=window.segmentio.methods[i];window.segmentio[key]=window.segmentio.factory(key)}window.segmentio.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.segmentio.SNIPPET_VERSION="2.0.9",
+  window.segmentio.load("a1u47srrv4");
+  window.segmentio.identify(2263, {"email":"ryan.vass.junk@gmail.com"}, { Intercom: { user_hash: '8bdde656b5ffd46cfc4c454fb3d41966f94ed251315e0f8a26a735407bd36030'} });
   
   
-  window.analytics.page();
+  window.segmentio.page();
 </script>
 </body>
 </html>
