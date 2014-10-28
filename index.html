@@ -197,7 +197,7 @@ START COPY/PASTE
                     </div>
                     <section class='panel'>
                         <div class="aside">search powered by: 
-                            <img src="//www.algolia.com/assets/algolia128x40.png" alt="Algoli Realtime Search"/ height="30" width="96">
+                            <img src="http://www.algolia.com/assets/algolia128x40.png" alt="Algoli Realtime Search" height="30" width="96">
                         </div>
                         <div class='panel-body'>
                             <div class='text-right text-sm' id='stats'></div>
@@ -367,9 +367,9 @@ START COPY/PASTE
         }
       }
       index.search($("#inputfield input").val(), searchCallback, {
-        hitsPerPage: 10,
+        hitsPerPage: 1000,
         facets: '*',
-        maxValuesPerFacet: 10,
+        maxValuesPerFacet: 1000,
         facetFilters: facetFilters
       });
     }
