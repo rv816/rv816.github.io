@@ -1,51 +1,47 @@
-
 <!DOCTYPE html>
 <html lang='en'>
-<head>
-<meta charset='UTF-8'>
-<title>OMOP v4 Vocabulary Browser</title>
-<meta name="google-site-verification" content="oID8EHssgwsVCDpExsFkdlNR7abJONmFd_dfSLrpYEM" />
-<link href="https://d3ibatyzauff7b.cloudfront.net/assets/vendors-8b1f48ce62f9b893d42b0dc7082b87dd.css" media="all" rel="stylesheet" />
-<link href="https://d3ibatyzauff7b.cloudfront.net/assets/override-d774c1f5134f61817e929860d47f7955.css" media="all" rel="stylesheet" />
-<link href="https://d3ibatyzauff7b.cloudfront.net/assets/application-d977376fd343ad5069731bb4cac63d60.css" media="all" rel="stylesheet" />
-<link href="https://d3ibatyzauff7b.cloudfront.net/assets/override-d774c1f5134f61817e929860d47f7955.css" media="all" rel="stylesheet" />
-<link href="//fonts.googleapis.com/css?family=Dosis:300,400,600" media="screen" rel="stylesheet" />
-<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" media="screen" rel="stylesheet" />
-<script src="https://d3ibatyzauff7b.cloudfront.net/assets/application-244fd66d5800dd1a9d53f0eb44a9e782.js"></script>
-<!--[if lt IE 9]>
+    <head>
+        <meta charset='UTF-8'>
+        <title>OMOP v4 Vocabulary Browser</title>
+        <meta name="google-site-verification" content="oID8EHssgwsVCDpExsFkdlNR7abJONmFd_dfSLrpYEM"/>
+        <script src="https://d3ibatyzauff7b.cloudfront.net/assets/application-244fd66d5800dd1a9d53f0eb44a9e782.js"></script>
+        <!--[if lt IE 9]>
 <link href="https://d3ibatyzauff7b.cloudfront.net/assets/ie-0c55892c68e6c522df9ca7951abd570e.css" media="screen" rel="stylesheet" />
 <script src="https://d3ibatyzauff7b.cloudfront.net/assets/respond.min-3e7529e90482f20a91a5eec56e79eddf.js"></script>
 <script src="https://d3ibatyzauff7b.cloudfront.net/assets/html5-6e3937a70d91d083b7ec550d9f729b9e.js"></script>
 <![endif]-->
-<meta content="authenticity_token" name="csrf-param" />
-<meta content="Nzk8XGBiQHkfjACRHcrhWyQP455vrlm9xHcWy7acilA=" name="csrf-token" />
-<script src="https://d3ibatyzauff7b.cloudfront.net/assets/algolia/algoliasearch.min-803ee1352aa72d095d5702c3d44da548.js"></script>
-<script src="https://d3ibatyzauff7b.cloudfront.net/javascripts/algolia/typeahead.bundle.min.js"></script>
-   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
-</head>
-<body>
-<div class='clear-page'>
-<div class='container'>
-<div class='m-l-r-auto m1000'>
-<div class='text-center hidden-xs'>
-<div class='spacer30'></div>
-</div>
-<div class='text-center visible-xs'>
-<a href="/"><img alt="Algolia256x80 dark" src="https://d3ibatyzauff7b.cloudfront.net/assets/algolia256x80_dark-14cf5e41fe5735d282365f3b5113ab96.png" style="height: 40px;" />
-</a><div class='spacer20'></div>
-</div>
-<div id='share-engine'>
-<h1 style="color:white">NIH Global Rare Disease Repository</h1>
-<h2 style="color:white">OMOP V4 Standard Vocabulary Browser</h2>
-<div class='clearfix'></div>
-
-
-<script>
+        <meta content="authenticity_token" name="csrf-param"/>
+        <meta content="Nzk8XGBiQHkfjACRHcrhWyQP455vrlm9xHcWy7acilA=" name="csrf-token"/>
+        <script src="https://d3ibatyzauff7b.cloudfront.net/assets/algolia/algoliasearch.min-803ee1352aa72d095d5702c3d44da548.js"></script>
+        <script src="https://d3ibatyzauff7b.cloudfront.net/javascripts/algolia/typeahead.bundle.min.js"></script>
+        <link href="file:///Users/vassr/Downloads/foundation-5.4.0/css/foundation.css" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Dosis:300,400,600" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600" rel="stylesheet" type="text/css">
+        <link href="http://cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="http://cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class='clear-page'>
+            <div class='container'>
+                <div class='m-l-r-auto m1000'>
+                    <div class='text-center hidden-xs'>
+                        <div class='spacer30'></div>
+                    </div>
+                    <div class='text-center visible-xs'>
+                        <a href="/"></a>
+                        <div class='spacer20'></div>
+                    </div>
+                    <div id='share-engine'>
+                        <h1 style="color:white">NIH Global Rare Disease Repository</h1>
+                        <h2 style="color:white">OMOP V4 Standard Vocabulary Browser</h2>
+                        <div class='clearfix'></div>
+                        <script>
   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 </script>
-</div>
-<div class='spacer30'></div>
-<!--
+                    </div>
+                    <div class='spacer30'></div>
+                    <!--
 DETAILS
 ======
 Index: omop_concepts
@@ -55,158 +51,162 @@ Index: omop_concepts
 Title: GRDR Terminology Browser
 Subtitle: Instantly Search the OMOP v4 Data model
 -->
-<!--
+                    <!--
 START COPY/PASTE
 8<---------------8<---------------8<---------------8<---------------
 -->
-
-
-<link href="//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css" />
-<link href="//cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
-<script src="//cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
-<script src="//cdn.jsdelivr.net/algoliasearch/latest/algoliasearch.min.js" type="text/javascript"></script>
-
-<!-- ======================== -->
-<!--  APPLICATION: CSS snippet -->
-<!-- ======================== -->
-<style>
-  .search-form {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-    display: block;
-    line-height: normal;
-    color: #333;
-  }
-  
-  .search-box-wrapper {
-    padding: 50px 100px 10px 100px;
-    font-size: 1em;
-    background-color: #122337;
-    max-width: 100%;
-    margin: 0px auto 0px auto;
-  }
-  
-  .search-box {
-    margin: 0px 0 0 0;
-    padding: 0 0 0 50px;
-    border-bottom: 2px solid white;
-    position: relative;
-  }
-  
-  #inputfield {
-    margin-right: 56px;
-  }
-  
-  #inputfield i {
-    font-size: 25px;
-    color: white;
-    position: absolute;
-    left: 0px;
-    bottom: 10px;
-  }
-    h1 {
-    font-family: 'Open Sans', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 800;
-    font-size: 45px
-  }
-    h2 {
-    font-family: 'Open Sans', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 300;
-    font-size: 35px
-  }
-
-   .h4 {
-    font-family: 'Open Sans', sans-serif;
-  }
-    .h3 {
-    font-family: 'Open Sans', sans-serif;
-  }
-  #inputfield input {
-    width: 100%;
-    height: 45px;
-    display: block;
-    border: none;
-    color: white;
-    padding: 0;
-    font-size: 2em;
-    background-color: transparent;
-    -webkit-appearance: none;
-    -webkit-rtl-ordering: logical;
-    -webkit-user-select: text;
-    margin: 0em;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-  }
-  }
-  #inputfield input:focus {
-    outline-width: 0px;
-  }
-  
-
-  #facets {
-    float: left;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-  }
-  
-  #facets li.active {
-       font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-  }
-  
-  #hits {
-    min-height: 500px;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  .hit {
-    padding: 5px 10px;
-    margin-bottom: 10px;
-    border: 1px solid #dedede;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  .hit em {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    color: #1D52E1;
-    font-size: 1.1em;
-    background-color: #46AEDA;
-    color: white;
-    padding: 0.05em 0.1em;
-    font-style: normal;
-  }
-</style>
-<!-- ======================== -->
-<!--  APPLICATION: HTML snippet -->
-<!-- ======================== -->
-<div class='search-box-wrapper'>
-<div class='search-box'>
-<div id='inputfield'>
-<i class='fa fa-search icon-search'></i>
-<input autocomplete='off' autocorrect='off' placeholder='Enter concept name, concept class, concept code, vocabulary id.....' spellcheck='false' type='text'>
-</div>
-</div>
-</div>
-<section class='panel'>
-<div class='panel-body'>
-<div class='text-right text-sm' id='stats'></div>
-<div id='facets'></div>
-<div id='hits'></div>
-</div>
-</section>
-<!-- ======================== -->
-<!-- APPLICATION: javascript snippet -->
-<!-- ======================== -->
-<script>
+                    <script src="http://cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
+                    <script src="http://cdn.jsdelivr.net/algoliasearch/latest/algoliasearch.min.js" type="text/javascript"></script>
+                    <!-- ======================== -->
+                    <!--  APPLICATION: CSS snippet -->
+                    <!-- ======================== -->
+                    <style>
+                        .html{
+                        background:#122337;
+                        }
+                        .clear-page{
+                        background:#122337}
+                        .container{
+                        background:#122337;
+                        }
+                        .search-form {
+                        margin: 0;
+                        padding: 0;
+                        border: 0;
+                        outline: 0;
+                        font-size: 100%;
+                        vertical-align: baseline;
+                        background: #122337;
+                        display: block;
+                        line-height: normal;
+                        color: #333;
+                        }
+                        .search-box-wrapper {
+                        padding: 50px 100px 10px 100px;
+                        font-size: 1em;
+                        background-color: #122337;
+                        max-width: 100%;
+                        margin: 0px auto 0px auto;
+                        }
+                        .search-box {
+                        margin: 0px 0 0 0;
+                        background: #122337;
+                        padding: 0 0 0 50px;
+                        border-bottom: 2px solid white;
+                        position: relative;
+                        }
+                        #inputfield {
+                        margin-right: 56px;
+                        background: #122337;
+                        }
+                        #inputfield i {
+                        font-size: 25px;
+                        color: white;
+                        position: absolute;
+                        left: 0px;
+                        bottom: 10px;
+                        }
+                        h1 {
+                        font-family: 'Open Sans', sans-serif;
+                        letter-spacing: 1px;
+                        font-weight: 800;
+                        font-size: 45px
+                        }
+                        h2 {
+                        font-family: 'Open Sans', sans-serif;
+                        letter-spacing: 1px;
+                        font-weight: 300;
+                        font-size: 35px
+                        }
+                        .h4 {
+                        font-family: 'Open Sans', sans-serif;
+                        }
+                        .h3 {
+                        font-family: 'Open Sans', sans-serif;
+                        }
+                        #inputfield input {
+                        width: 100%;
+                        height: 45px;
+                        display: block;
+                        border: none;
+                        color: white;
+                        padding: 0;
+                        font-size: 2em;
+                        background-color: transparent;
+                        -webkit-appearance: none;
+                        -webkit-rtl-ordering: logical;
+                        -webkit-user-select: text;
+                        margin: 0em;
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 400;
+                        }
+                        }
+                        #inputfield input:focus {
+                        outline-width: 0px;
+                        }
+                        .aside {
+                        float: right;
+                        min-height:60px;
+                        margin-bottom: 10px;
+                        margin-top:10px;
+                        font-family: 'Open Sans', sans-serif;
+                        color: gray;
+                        }
+                        #facets {
+                        float: left;
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 400;
+                        }
+                        #facets li.active {
+                        font-weight: bold;
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 400;
+                        }
+                        #hits {
+                        min-height: 500px;
+                        font-family: 'Open Sans', sans-serif;
+                        }
+                        .hit {
+                        padding: 5px 10px;
+                        margin-bottom: 10px;
+                        border: 1px solid #dedede;
+                        font-family: 'Open Sans', sans-serif;
+                        }
+                        .hit em {
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: bold;
+                        color: #1D52E1;
+                        font-size: 1.1em;
+                        background-color: #46AEDA;
+                        color: white;
+                        padding: 0.05em 0.1em;
+                        font-style: normal;
+                        }</style>
+                    <!-- ======================== -->
+                    <!--  APPLICATION: HTML snippet -->
+                    <!-- ======================== -->
+                    <div class='search-box-wrapper'>
+                        <div class='search-box'>
+                            <div id='inputfield'>
+                                <i class='fa fa-search icon-search'></i>
+                                <input autocomplete='off' autocorrect='off' placeholder='Enter concept name, concept class, concept code, vocabulary id.....' spellcheck='false' type='text'>
+                                <div class="aside">search powered by: 
+                                    <img src="//www.algolia.com/assets/algolia128x40.png" alt="Algoli Realtime Search"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <section class='panel'>
+                        <div class='panel-body'>
+                            <div class='text-right text-sm' id='stats'></div>
+                            <div id='facets'></div>
+                            <div id='hits'></div>
+                        </div>
+                    </section>
+                    <!-- ======================== -->
+                    <!-- APPLICATION: javascript snippet -->
+                    <!-- ======================== -->
+                    <script>
   // Helper
   Number.prototype.number_with_delimiter = function(delimiter) {
     var number = this + '', delimiter = delimiter || ',';
@@ -382,18 +382,14 @@ START COPY/PASTE
     }
   });
 </script>
-<!--
+                    <!--
 8<---------------8<---------------8<---------------8<---------------
 END COPY/PASTE
 -->
-
-</div>
-</div>
-</div>
-
-
-
-<script>
+                </div>
+            </div>
+        </div>
+        <script>
   window.segmentio=window.segmentio||[],window.segmentio.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.segmentio.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.segmentio.push(a),window.segmentio}};for(var i=0;i<window.segmentio.methods.length;i++){var key=window.segmentio.methods[i];window.segmentio[key]=window.segmentio.factory(key)}window.segmentio.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.segmentio.SNIPPET_VERSION="2.0.9",
   window.segmentio.load("a1u47srrv4");
   window.segmentio.identify(2263, {"email":"ryan.vass.junk@gmail.com"}, { Intercom: { user_hash: '8bdde656b5ffd46cfc4c454fb3d41966f94ed251315e0f8a26a735407bd36030'} });
@@ -401,6 +397,5 @@ END COPY/PASTE
   
   window.segmentio.page();
 </script>
-</body>
+    </body>
 </html>
-
