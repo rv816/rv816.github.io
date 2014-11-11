@@ -2,7 +2,7 @@
 <html lang='en'>
     <head>
         <meta charset='UTF-8'>
-        <title>OMOP v4 Vocabulary Browser</title>
+        <title>OMOP v5 Vocabulary Browser</title>
         <meta name="google-site-verification" content="oID8EHssgwsVCDpExsFkdlNR7abJONmFd_dfSLrpYEM"/>
         <script src="https://d3ibatyzauff7b.cloudfront.net/assets/application-244fd66d5800dd1a9d53f0eb44a9e782.js"></script>
         <!--[if lt IE 9]>
@@ -34,7 +34,7 @@
                     </div>
                     <div id='share-engine'>
                         <h1 style="color:white">NIH Global Rare Disease Repository</h1>
-                        <h2 style="color:white">OMOP V4 Standard Vocabulary Browser</h2>
+                        <h2 style="color:white">OMOP V5 Standard Vocabulary Browser</h2>
                         <div class='clearfix'></div>
                         <script>
   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
@@ -270,10 +270,10 @@ START COPY/PASTE
         res += '</span> ';
       }
       // hit subtitle (secondary attribute)
-      if ('CONCEPT_CLASS' !== '' && 'CONCEPT_CLASS' !== 'terminology_name') {
-        var v = hit._highlightResult['CONCEPT_CLASS'] ?
-          hit._highlightResult['CONCEPT_CLASS'].value :
-          hit['CONCEPT_CLASS'];
+      if ('CONCEPT_CLASS_ID' !== '' && 'CONCEPT_CLASS_ID' !== 'VOCABULARY_ID') {
+        var v = hit._highlightResult['CONCEPT_CLASS_ID'] ?
+          hit._highlightResult['CONCEPT_CLASS_ID'].value :
+          hit['CONCEPT_CLASS_ID'];
         if (v && v.trim() !== '') {
           res += '' + stripTags(v) + '</p>';
         }
@@ -288,10 +288,10 @@ START COPY/PASTE
         }
       }
 
-      if ('terminology_name' !== '') {
-        var v = hit._highlightResult['terminology_name'] ?
-          hit._highlightResult['terminology_name'].value :
-          hit['terminology_name'];
+      if ('VOCABULARY_ID' !== '') {
+        var v = hit._highlightResult['VOCABULARY_ID'] ?
+          hit._highlightResult['VOCABULARY_ID'].value :
+          hit['VOCABULARY_ID'];
         if (v && v.trim() !== '') {
           res += "<dt>Source Terminology: </dt><dd>" + stripTags(v) + "</dd>";
         }
@@ -312,7 +312,7 @@ START COPY/PASTE
       if (true) {
         res += '<dl class="dl-horizontal">';
         for (var attr in hit) {
-          if (attr !== 'objectID' && attr !== '_highlightResult' && attr != 'CONCEPT_NAME' && attr != 'CONCEPT_CODE' && attr != 'terminology_name') {
+          if (attr !== 'objectID' && attr !== '_highlightResult' && attr != 'CONCEPT_NAME' && attr != 'CONCEPT_CODE' && attr != 'VOCABULARY_ID') {
             var v;
             if (hit._highlightResult[attr]) {
               v = hit._highlightResult[attr].value;
